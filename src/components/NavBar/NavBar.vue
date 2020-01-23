@@ -29,17 +29,24 @@
             dense 
             dark 
             color="deep-purple accent-4"
+           
         > 
             <v-app-bar-nav-icon
+                class="hidden-md-and-up"
                 @click="sideNav = !sideNav"
             >
             </v-app-bar-nav-icon>
 
-            <v-toolbar-title>Page title</v-toolbar-title>
+            <v-toolbar-title>Online Store</v-toolbar-title>
 
             <v-spacer></v-spacer>
 
-            <v-btn v-for="(link, i) in links" :key="i" color="transparent" :to="link.url" class="ma-1">
+            <v-btn 
+            v-for="(link, i) in links" 
+            :key="i" 
+            color="transparent" 
+            :to="link.url" 
+            class="ma-1 hidden-sm-and-down">
                 <v-icon left v-text="link.icon"></v-icon>
                 {{ link.title }}
             </v-btn>
